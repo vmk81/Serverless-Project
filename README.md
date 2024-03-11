@@ -61,7 +61,7 @@ Section 5: Test the Output.
 
 ### Section 5: Test the Output
 
-11. Open Postman from your Desktop and copy/paste the url copied from step 10 and paste it on the url box . Select POST as the protocol from the left. Go to 'Body' tab (Red Arrow in the screenshot below) and paste the JSON. Make sure the operation variable is 'create' (Black Arrow) and click on 'Send'button. If you recieved status code 200, then it was successful. Navigate to the DynamoDb table we created earlier and click on 'View table details' tab . You can see the new table entry(Blue Arrow).Hence the 'Create' test succeeded.
+11. Open Postman from your Desktop and copy/paste the url copied from step 10 and paste it on the url box . Select POST as the protocol from the left. Go to 'Body' tab (Red Arrow in the screenshot below) and paste the JSON from Sample.JSON attached to this page. Make sure the operation variable is 'create' (Black Arrow) and click on 'Send'button. If you recieved status code 200, then it was successful. Navigate to the DynamoDb table we created earlier and click on 'View table details' tab . You can see the new table entry(Blue Arrow).Hence the 'Create' test succeeded.
 ![11-Test for Update](https://github.com/vmk81/Serverless-Project/assets/157844406/ab947c39-db8e-49ec-a31b-34d7b8a36917)
 
 13. Go back to Postman and repeat the same step for 'Read' operation . Change the operation parmeter on JSON to 'read' (Red Arrow in the screenshot below). and click on 'Send' button. You recieved status code 200 . Hence the 'Read' test succeeded. Repeat the same steps for 'Update' and 'Delete' by making the similar changes in the operation parameter.
