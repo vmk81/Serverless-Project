@@ -50,13 +50,20 @@ Section 5: Test the Output.
 7. Go to the API Gateway console and click on 'Create API' button.Scroll to the REST API section and click on 'Build'. Give a name to the API which is Dynamo-API in this case and click on 'Create API' button.
 ![7-Create Rest API](https://github.com/vmk81/Serverless-Project/assets/157844406/dfda5b6c-d360-4964-9dcf-6e93f954f26e)
  
-8. Navigate inside the API and click on 'Create resource' button (Red Arrow in the screenshot below).Inside the Create resource page,give a name inside 'Resource name' and click on 'Create resource' button. The 'Resource path' will automatically get populated once its get created.
+8. Navigate inside the API and click on 'Create resource' button (Red Arrow in the screenshot below).Inside the Create resource page,give a name inside 'Resource name' and click on 'Create resource' button. The 'Resource path' will automatically get populated once its get created.  
 ![8-Create Rest API Resource](https://github.com/vmk81/Serverless-Project/assets/157844406/0a3f5855-52d8-47a2-bed7-d753fa9dab9c)
 
 9. Inside the Resources page,click on 'Create method' button(Red Arrow in the screenshot below).Inside the Create method page,select POST as the method type(Black Arrow) and 'Integration type' as Lambda . Under 'Lambda function',select the Lambda arn for the Lambda we created in step 3. And then click on 'Create method'.  
 ![9-Create Rest API Method](https://github.com/vmk81/Serverless-Project/assets/157844406/d0fe1505-f065-40cc-bb4b-84b1e3db7a77)
 
-10. Now we are ready to deploy the API. Click on the 'Deploy API' button. Inside the Deploy API page select 'New Stage' and give the 'Stage name' as Test.And then click on 'Deploy' button. On the Stages page collapse the Test stage(Red Arrow in the screenshot below) to POST. And then invoke URL and copy(Black Arrow).
+10. Now we are ready to deploy the API. Click on the 'Deploy API' button. Inside the Deploy API page select 'New Stage' and give the 'Stage name' as Test.And then click on 'Deploy' button. On the Stages page collapse the Test stage(Red Arrow in the screenshot below) to POST. And then invoke URL and copy(Black Arrow).  
 ![10-Create Rest API Deploy](https://github.com/vmk81/Serverless-Project/assets/157844406/107d912e-cd37-48df-9d8b-e8e0f8aa5240)
 
- 
+### Section 5: Test the Output
+
+11. Open Postman from your Desktop and copy/paste the url copied from step 10 and paste it on the url box . Select POST as the protocol from the left. Go to 'Body' tab (Red Arrow in the screenshot below) and paste the JSON. Make sure the operation variable is 'create' (Black Arrow) and click on 'Send'button. If you recieved status code 200, then it was successful. Navigate to the DynamoDb table we created earlier and click on 'View table details' tab . You can see the new table entry(Blue Arrow).Hence the 'Create' test succeeded.
+![11-Test for Update](https://github.com/vmk81/Serverless-Project/assets/157844406/ab947c39-db8e-49ec-a31b-34d7b8a36917)
+
+13. Go back to Postman and repeat the same step for 'Read' operation . Change the operation parmeter on JSON to 'read' (Red Arrow in the screenshot below). and click on 'Send' button. You recieved status code 200 . Hence the 'Read' test succeeded. Repeat the same steps for 'Update' and 'Delete' by making the similar changes in the operation parameter.
+![12-Test for Read](https://github.com/vmk81/Serverless-Project/assets/157844406/dfb7f21b-ab42-4e68-bac9-d92289d78d3b)
+
