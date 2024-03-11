@@ -1,0 +1,10 @@
+{
+    "operation": "create",
+    "tableName": "my-serverless-table",
+    "payload": {
+        "Item": {
+            "id": "1A",
+            "state": "Pennsylvania"
+        }
+    }
+}
